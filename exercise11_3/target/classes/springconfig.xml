@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+
+
+    <!-- Using Constructor injection -->
+<!--    <bean id="bookService" class="cs544.exercise11_3.BookService" > <constructor-arg>-->
+<!--        <list>-->
+<!--            <bean id="amazonSupplier" class="cs544.exercise11_3.Amazon" />-->
+<!--            <bean id="barnesAndNobleSupplier" class="cs544.exercise11_3.BarnesAndNoble" />-->
+<!--            <bean id="eBooksSupplier" class="cs544.exercise11_3.EBooks" />-->
+<!--            <bean id="bordersSupplier" class="cs544.exercise11_3.Borders" />-->
+<!--        </list> </constructor-arg>-->
+<!--    </bean>-->
+
+
+
+    <!-- Using Annotation @autowired -->
+
+          <context:annotation-config />
+           <bean id="bookService" class="cs544.exercise11_3.BookService" />
+            <bean id="amazonSupplier" class="cs544.exercise11_3.Amazon" />
+            <bean id="barnesAndNobleSupplier" class="cs544.exercise11_3.BarnesAndNoble" />
+            <bean id="eBooksSupplier" class="cs544.exercise11_3.EBooks" />
+            <bean id="bordersSupplier" class="cs544.exercise11_3.Borders" />
+</beans>
